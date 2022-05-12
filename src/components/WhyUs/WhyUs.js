@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Title from "./../Title/Title";
 import Button from "./../Button/Button";
 import { WhatWeDoContainer, WhatWeDoItem } from "./../WhatWeDo/WhatWeDoItem";
+import { Link } from "react-scroll";
 
 const WhyUs = () => {
   return (
@@ -22,7 +23,9 @@ const WhyUs = () => {
             their expectations. We strive to exceed those expectations in price,
             quality, and on time delivery.
           </WhyUsParagraph>
-          <Button>Connect with Us</Button>
+          <Link to="contact" spy={true} smooth={true}>
+            <Button>Connect with Us</Button>
+          </Link>
         </Right>
       </Information>
       <WhatWeDoContainer>

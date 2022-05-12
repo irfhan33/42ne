@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const Banner = () => {
   return (
@@ -15,7 +16,9 @@ const Banner = () => {
             42NE is an agency specialise in the web development & mobile app
             development & digital solutions.
           </BannerParagraph>
-          <BannerCTA>Let’s create something together.</BannerCTA>
+          <Link to="contact" spy={true} smooth={true}>
+            <BannerCTA>Let’s create something together.</BannerCTA>
+          </Link>
         </DetailWrapper>
       </BannerDetail>
       <BigBubble src="/assets/bubble.svg" />

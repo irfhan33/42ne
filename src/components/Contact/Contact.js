@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Title from "../Title/Title";
 import Button from "./../Button/Button";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [brief, setBrief] = useState("");
+
+  const [nameValidation, setNameValidation] = useState("2");
+  const [emailValidation, setEmailValidation] = useState("2");
+  const [briefValidation, setBriefValidation] = useState("2");
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    setNameValidation(!name ? 0 : 1);
+    setEmailValidation(!email ? 0 : 1);
+    setBriefValidation(!brief ? 0 : 1);
+  };
   return (
-    <Container>
+    <Container id="contact">
       <Left>
         <img src="/assets/contact-us.jpg" alt="contact us image" />
       </Left>
@@ -14,10 +28,33 @@ const Contact = () => {
           Want to start work with us?
         </Title>
         <Title lightgray>Fill in the form to get in touch with us.</Title>
-        <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Give us a short brief" />
+        <form action="" onSubmit={sendMessage}>
+          <InputContainer>
+            <Input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+              error={nameValidation ? 0 : 1}
+            />
+          </InputContainer>
+
+          <InputContainer>
+            <Input
+              type="text"
+              placeholder="Email"
+              error={emailValidation ? 0 : 1}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </InputContainer>
+
+          <InputContainer>
+            <Input
+              type="text"
+              placeholder="Give us a short brief"
+              error={briefValidation ? 0 : 1}
+              onChange={(e) => setBrief(e.target.value)}
+            />
+          </InputContainer>
           <Button>Send Message</Button>
         </form>
       </Right>
@@ -41,22 +78,26 @@ const Container = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
     margin-top: 20px;
+    gap: 30px;
+  }
+`;
+
+const InputContainer = styled.div``;
+
+const Input = styled.input`
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightdark};
+  padding: 10px 5px;
+  font-size: 16px;
+
+  &:focus {
+    border-bottom: 2px solid ${({ theme }) => theme.colors.blue};
   }
 
-  input {
-    width: 100%;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.lightdark};
-    padding: 10px 5px;
-    font-size: 16px;
-
-    &:focus {
-      border-bottom: 2px solid ${({ theme }) => theme.colors.blue};
-    }
-  }
+  border-bottom: 2px solid ${({ error }) => error && "red"};
 `;
 
 const Left = styled.div`

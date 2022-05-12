@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Title from "../Title/Title";
 import Button from "./../Button/Button";
+import { Link } from "react-scroll";
 
 export const OurWorkListContainer = ({ children }) => {
   return <Container>{children}</Container>;
@@ -22,9 +23,11 @@ export const OurWorkListButton = () => {
     <ButtonContainer>
       <ButtonParagraph>
         Interested in knowing more about us and our work? Please get in touch
-        with us to take the discussion to the next stage.{" "}
+        with us to take the discussion to the next stage.
       </ButtonParagraph>
-      <Button>Connect with Us</Button>
+      <Link to="contact" spy={true} smooth={true}>
+        <Button>Connect with Us</Button>
+      </Link>
     </ButtonContainer>
   );
 };

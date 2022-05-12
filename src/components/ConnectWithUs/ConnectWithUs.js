@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Title from "./../Title/Title";
 import Button from "./../Button/Button";
+import { Link } from "react-scroll";
 
 const ConnectWithUs = () => {
   return (
@@ -15,7 +16,9 @@ const ConnectWithUs = () => {
           whar drive us. We are here to help you grow, grow faster. Get in touch
           with us to know more.
         </ConnectWithUsParagraph>
-        <Button>Connect With Us</Button>
+        <Link to="contact" spy={true} smooth={true}>
+          <Button>Connect With Us</Button>
+        </Link>
       </Left>
       <Right>
         <img src="/assets/team.svg" alt="" />
