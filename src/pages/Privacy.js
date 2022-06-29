@@ -10,8 +10,7 @@ const Privacy = () => {
       <h1>42NE LTD PRIVACY POLICY</h1>
       <p>
         This website is operated by 42NE LTD, a company incorporated and
-        registered in England (company number 22-635-8628), whose registered
-        Forest House Business Centre 8 Gainsborough Road E11 1HT LONDON
+        registered in England (company number 12952212), whose registered office is at Forest House Business Centre 8 Gainsborough Road E11 1HT LONDON.
       </p>
       <p>
         We take your privacy very seriously and we ask that you read this
@@ -27,9 +26,9 @@ const Privacy = () => {
         this policy occasionally to ensure you are aware of the most recent
         version that will apply each time you access this website.
       </p>
-      <p>This policy was last updated on 18th May 2021.</p>
+      <p>This policy was last updated on 24th Jun 2022.</p>
       <p>
-        Modern Media Limited (‘we’ or ‘us’) are a ‘data controller’ for the
+        42NE LTD (‘we’ or ‘us’) are a ‘data controller’ for the
         purposes of the Data Protection Act 2018, the General Data Protection
         Regulation (EU) 2016/679 (as incorporated into UK law) and any
         subsequent UK data protection legislation and we are responsible for,
@@ -38,7 +37,7 @@ const Privacy = () => {
       <h1>Who does this privacy policy apply to?</h1>
       <p>
         This privacy policy applies to visitors to our website{" "}
-        <a href="http://42neltd.com"> http://42neltd.com</a>, those who contact
+        <a href="https://42ne.co.uk/"> https://42ne.co.uk</a>, those who contact
         us via our website or any of the contact methods specified on it, as
         well as any other individuals whom we refer to this privacy policy in
         connection with the personal information we process about them. If you
@@ -296,14 +295,13 @@ const Privacy = () => {
       <h1>How to contact us</h1>
 
       <p>
-        Please contact Nicola Ray, our nominated data protection representative,
-        at D-U-N-S® number: 22-635-8628 if you have any questions about this
-        privacy policy or the information we hold about you.
+        Please contact Fortunato Iera, our nominated data protection representative,
+        at info@42ne.co.uk if you have any questions about this privacy policy or the information we hold about you.
       </p>
 
       <p>
         If you wish to contact us regarding anything else, please send an email
-        to D-U-N-S® number: 22-635-8628 or write to us at Forest House Business
+        to info@42ne.co.uk or write to us at Mr Fortunato Iera, Forest House Business
         Centre 8 Gainsborough Road E11 1HT LONDON
       </p>
 

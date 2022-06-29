@@ -29,7 +29,10 @@ const Container = styled.div`
   }
 `;
 
-const TestimonialParagraph = styled.p``;
+const TestimonialParagraph = styled.p`
+  display: block;
+  margin-bottom: auto;
+`;
 
 const UserInformation = styled.div`
   display: flex;
@@ -42,6 +45,8 @@ const UserProfile = styled.img`
   border-radius: 50%;
   object-fit: cover;
   width: 70px;
+  height: 70px;
+  margin-top: auto;
 `;
 
 const List = styled.div`
@@ -49,6 +54,8 @@ const List = styled.div`
   border-radius: 0px 20px 20px 20px;
   padding: 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   ${(props) =>
     props.active &&

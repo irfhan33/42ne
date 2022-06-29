@@ -18,10 +18,6 @@ const Header = () => {
         <Logo />
       </Link>
       <HeaderLinks offset={offset ? 1 : 0}>
-        <HeaderItem>Home</HeaderItem>
-        <HeaderItem>Services</HeaderItem>
-        <HeaderItem>Portfolio</HeaderItem>
-        <HeaderItem>About Us</HeaderItem>
 
         <ScrollLink
           to="contact"

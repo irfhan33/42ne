@@ -13,7 +13,7 @@ const Footer = () => {
         </Link>
         <Middle>
           <Links>
-            <LinkItem to="">About Us</LinkItem>
+            <span>©2022 42NE Limited</span>
             <ScrollLink
               to="contact"
               spy={true}
@@ -66,6 +66,16 @@ const Links = styled.div`
 `;
 
 const LinkItem = styled(Link)`
+  text-decoration: none;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.lightdark};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue};
+  }
+`;
+
+const copy = styled(Link)`
   text-decoration: none;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.lightdark};
