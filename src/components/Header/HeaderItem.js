@@ -45,4 +45,8 @@ const HeaderItemStyled = styled.div`
     font-size: 20px;
     color: white;
   }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue};
+  }
 `;

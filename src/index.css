@@ -42,7 +42,9 @@ body {
   overflow-x: hidden;
 }
 
-p {
+p,
+ul,
+li {
   font-size: 18px;
   line-height: 28px;
 }

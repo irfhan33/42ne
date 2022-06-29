@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../Header/Header";
 import Banner from "../Banner/Banner";
 
 const Hero = () => {
   return (
     <Container>
-      <Header />
       <Banner />
     </Container>
   );

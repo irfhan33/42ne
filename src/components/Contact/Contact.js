@@ -12,6 +12,18 @@ const Contact = () => {
   const [emailValidation, setEmailValidation] = useState("2");
   const [briefValidation, setBriefValidation] = useState("2");
 
+  const validationName = () => {
+    setNameValidation(!name ? 0 : 1);
+  };
+
+  const validationEmail = () => {
+    setEmailValidation(!email ? 0 : 1);
+  };
+
+  const validationBrief = () => {
+    setBriefValidation(!brief ? 0 : 1);
+  };
+
   const sendMessage = (e) => {
     e.preventDefault();
     setNameValidation(!name ? 0 : 1);
@@ -33,7 +45,10 @@ const Contact = () => {
             <Input
               type="text"
               placeholder="Name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                validationName();
+              }}
               error={nameValidation ? 0 : 1}
             />
           </InputContainer>
@@ -43,7 +58,10 @@ const Contact = () => {
               type="text"
               placeholder="Email"
               error={emailValidation ? 0 : 1}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                validationEmail();
+              }}
             />
           </InputContainer>
 
@@ -52,7 +70,10 @@ const Contact = () => {
               type="text"
               placeholder="Give us a short brief"
               error={briefValidation ? 0 : 1}
-              onChange={(e) => setBrief(e.target.value)}
+              onChange={(e) => {
+                setBrief(e.target.value);
+                validationBrief();
+              }}
             />
           </InputContainer>
           <Button>Send Message</Button>

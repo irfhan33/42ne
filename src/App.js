@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
 import Home from "./pages/Home";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Privacy from "./pages/Privacy";
 function App() {
   const theme = {
     colors: {
@@ -13,7 +13,12 @@ function App() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

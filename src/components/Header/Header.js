@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { HeaderItem, HeaderLinks } from "./HeaderItem";
 import Logo from "./../Logo/Logo";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [offset, setOffset] = useState(false);
@@ -12,7 +13,9 @@ const Header = () => {
 
   return (
     <Container>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <HeaderLinks offset={offset ? 1 : 0}>
         <HeaderItem>Home</HeaderItem>
         <HeaderItem>Services</HeaderItem>
@@ -31,9 +34,15 @@ export default Header;
 const Container = styled.nav`
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 90px;
   align-items: center;
-  margin-top: 20px;
+  padding: 20px 5%;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 300;
+  margin: 0 -5%;
+  transition: all 250ms;
 `;
 
 const MenuIcon = styled.img`
