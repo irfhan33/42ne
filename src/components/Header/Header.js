@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { HeaderItem, HeaderLinks } from "./HeaderItem";
 import Logo from "./../Logo/Logo";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
   const [offset, setOffset] = useState(false);
@@ -21,7 +22,16 @@ const Header = () => {
         <HeaderItem>Services</HeaderItem>
         <HeaderItem>Portfolio</HeaderItem>
         <HeaderItem>About Us</HeaderItem>
-        <HeaderItem>Contact Us</HeaderItem>
+
+        <ScrollLink
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          <HeaderItem>Contact Us</HeaderItem>
+        </ScrollLink>
         <CloseIcon onClick={toggleOffset} src="/assets/close-icon.svg" />
       </HeaderLinks>
       <MenuIcon src="/assets/menu-icon.svg" onClick={toggleOffset} />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "./../Logo/Logo";
 import SocialMediaItem from "./../SocialMediaItem/SocialMediaItem";
 import { Link } from "react-router-dom";
-
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 const Footer = () => {
   return (
     <>
@@ -14,7 +14,15 @@ const Footer = () => {
         <Middle>
           <Links>
             <LinkItem to="">About Us</LinkItem>
-            <LinkItem to="">Contact Us</LinkItem>
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <LinkItem to="">Contact Us</LinkItem>
+            </ScrollLink>
             <LinkItem to="privacy-policy">Privacy Policy</LinkItem>
           </Links>
         </Middle>
@@ -46,17 +54,15 @@ const Container = styled.div`
 `;
 
 const Middle = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
   margin-left: 30px;
 `;
 
 const Links = styled.div`
   display: flex;
-  gap: 34px;
   white-space: nowrap;
+  gap: 20px;
 `;
 
 const LinkItem = styled(Link)`
@@ -73,10 +79,8 @@ const SocialMedia = styled.div`
   display: flex;
   gap: 20px;
   margin-left: auto;
-`;
 
-const Copyright = styled.p`
-  text-align: center;
-  padding-bottom: 30px;
-  font-size: 16px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
